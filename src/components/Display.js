@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// const PropTypes = require('prop-types');
 
 export default class Display extends React.Component {
   constructor(props) {
