@@ -1,3 +1,43 @@
+$width: 700px;
+$height: 100px;
+
 body {
-  background: #000;
+  .result {
+    background-color: grey;
+    width: $width;
+    height: $height;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+    font-size: 45px;
+    box-sizing: border-box;
+  }
+
+  [class^="group"] {
+    background: rgba(43, 236, 250, 0.192);
+    // display: flex;
+    // flex-grow: 25%;
+    height: $height;
+    width: $width;
+    button:last-child {
+      background: #F5913E;
+    }
+
+    button {
+      // background: #000;
+      height: 100%;
+      width: 25%;
+    }
+  }
+  .group-5 {
+    // background: #000;
+    // display: none;
+    button:first-child{
+      // background: #000;
+      width: 50%;
+    }
+  }
 }
