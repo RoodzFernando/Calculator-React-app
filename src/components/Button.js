@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Button(props) {
+export default function Button({ name }) {
   return (
-    <button type="submit">{props.name}</button>
+    <button type="submit">{name}</button>
   );
 }
 

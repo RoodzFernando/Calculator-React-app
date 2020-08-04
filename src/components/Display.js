@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Display(props) {
-  return <div className="result">{props.result}</div>;
+export default function Display({ result }) {
+  return (
+    <div className="result">{result}</div>
+  );
 }
 
 Display.defaultProps = {
