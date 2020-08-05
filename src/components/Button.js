@@ -10,5 +10,5 @@ Button.defaultProps = {
   color: "#F5913E"
 }
 Button.propTypes = {
-  name: PropTypes.string
-}
+  name: PropTypes.string.isRequired,
+};

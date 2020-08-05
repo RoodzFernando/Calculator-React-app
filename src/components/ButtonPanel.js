@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../components/Button';
+import Button from './Button';
 
 export default function ButtonPanel() {
     return(
@@ -33,6 +33,6 @@ export default function ButtonPanel() {
           <Button color = "#E0E0E0" name = "." />
           <Button name = "=" />
         </div>
-      </div>
-    );
+    </div>
+  );
 }
