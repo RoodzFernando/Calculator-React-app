@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Button(props) {
-    return ( 
-      <button>{props.name}</button>
-    );
+export default function Button({ name }) {
+  return (
+    <button type="submit">{name}</button>
+  );
 }
 
 Button.propTypes = {
-  name: PropTypes.string
-}
+  name: PropTypes.string.isRequired,
+};
