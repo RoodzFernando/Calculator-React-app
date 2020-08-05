@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 export default function Button({ color, wide, name }) {
   return (
     <button type="submit" style={{ backgroundColor: color, width: wide ? '50%' : '25%' }}>{name}</button>
