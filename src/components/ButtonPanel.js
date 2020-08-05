@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../components/Button';
+import Button from './Button';
 
 export default function ButtonPanel(props) {
     return(
@@ -33,6 +33,6 @@ export default function ButtonPanel(props) {
           <Button onClick = {props.clickHandler} color = "#E0E0E0" name = "." />
           <Button onClick = {props.clickHandler} name = "=" />
         </div>
-      </div>
-    );
+    </div>
+  );
 }

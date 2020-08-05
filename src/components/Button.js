@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-export default function Button(props) {
-  
-    return ( 
-      <button onClick = {props.onClick} style={{backgroundColor: props.color, width: props.wide ? "50%" : "25%"}}>{props.name}</button>
-    );
+export default function Button({ color, wide, name }) {
+  return (
+    <button type="submit" style={{ backgroundColor: color, width: wide ? '50%' : '25%' }}>{name}</button>
+  );
 }
 Button.defaultProps = {
-  color: "#F5913E"
-}
+  color: '#F5913E',
+  wide: false,
+};
 Button.propTypes = {
-  name: PropTypes.string
-}
+  name: PropTypes.string.isRequired,
+  color: PropTypes.string,
+  wide: PropTypes.bool,
+};
