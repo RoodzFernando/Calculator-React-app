@@ -1,0 +1,29 @@
+body {
+  margin: 0 auto;
+  margin-top: 1%;
+  width: 50%; }
+  body .result {
+    background-color: grey;
+    width: 700px;
+    height: 100px;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+    font-size: 45px;
+    box-sizing: border-box; }
+  body [class^="group"] {
+    background: rgba(43, 236, 250, 0.192);
+    height: 100px;
+    width: 700px; }
+    body [class^="group"] button {
+      height: 100%;
+      width: 25%;
+      color: #000;
+      font-size: 30px;
+      border: 1.2px solid rgba(128, 128, 128, 0.329);
+      cursor: pointer; }
+
+/*# sourceMappingURL=index.css.map */
