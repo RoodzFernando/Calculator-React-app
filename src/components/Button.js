@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function Button(props) {
+  
     return ( 
-      <button style={{backgroundColor: props.color, width: props.wide ? "50%" : "25%"}}>{props.name}</button>
+      <button onClick = {props.onClick} style={{backgroundColor: props.color, width: props.wide ? "50%" : "25%"}}>{props.name}</button>
     );
 }
 Button.defaultProps = {
