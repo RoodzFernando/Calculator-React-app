@@ -9,15 +9,18 @@ export default class App extends React.Component {
     this.state = {
       total: '',
       next: '',
-      operation: ''
+      operation: '',
+      numOne: ''
     }
+    this.handleClick = this.handleClick.bind(this);
   }
-  handleClick(e) {
+
+  handleClick(buttonName) {
     this.setState(prevState => {
-      Calculate(prevState, e);
+      Calculate(prevState, buttonName);
     })
-    // console.log(/\d/.test(e.target.textContent) ? e.target.textContent : false)
   }
+
   render() {
     return (
       <div id="calculation-interface">
@@ -26,5 +29,6 @@ export default class App extends React.Component {
       </div>
     );
   }
+
 }
 

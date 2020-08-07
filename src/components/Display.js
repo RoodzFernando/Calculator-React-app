@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Display({ result }) {
+export default function Display(props) {
   return (
-    <div className="result">{result}</div>
+    <div className="result">{props.result}</div>
   );
 }
 

@@ -14,7 +14,7 @@ export default function ButtonPanel(props) {
           <Button onClick = {props.clickHandler} color = "#E0E0E0" name = "7"/>
           <Button onClick = {props.clickHandler} color = "#E0E0E0" name = "8"/>
           <Button onClick = {props.clickHandler} color = "#E0E0E0" name = "9"/>
-          <Button onClick = {props.clickHandler} name = "X"/>
+          <Button onClick = {props.clickHandler} name = "x"/>
         </div>
         <div className="group-3">
           <Button onClick = {props.clickHandler} color = "#E0E0E0" name = "4"/>

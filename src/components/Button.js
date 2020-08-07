@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-export default function Button({ color, wide, name }) {
+export default function Button({ color, wide, name, onClick }) {
+  const handleClick = () => {
+    onClick(name);
+  };
   return (
-    <button type="submit" style={{ backgroundColor: color, width: wide ? '50%' : '25%' }}>{name}</button>
+    <button onClick = {handleClick} type="submit" style={{ backgroundColor: color, width: wide ? '50%' : '25%' }}>{name}</button>
   );
 }
 Button.defaultProps = {
