@@ -13,7 +13,6 @@ export default function calculate(data, buttonName) {
       data.numOne = data.next;
       data.next = null;
     }
-    console.log(buttonName.length);
   }
 
   if (/\d/.test(buttonName)) {
