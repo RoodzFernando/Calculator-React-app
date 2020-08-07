@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import Operate from './operate';
 
 export default function calculate(data, buttonName) {
@@ -8,8 +9,8 @@ export default function calculate(data, buttonName) {
   }
 
   if (/\+|-|x|÷/.test(buttonName)) {
-    if(buttonName.length == 1) {
-      data.operation = buttonName
+    if (buttonName.length === 1) {
+      data.operation = buttonName;
       data.numOne = data.next;
       data.next = null;
     }
@@ -26,19 +27,17 @@ export default function calculate(data, buttonName) {
   if (buttonName === '.') {
     if (data.next) {
       data.next += buttonName;
-    }else{
-      data.next =`0${buttonName}`;
+    } else {
+      data.next = `0${buttonName}`;
     }
   }
 
   if (buttonName === '+/-') {
     if (data.next > 0) {
-      data.next = `-${data.next}`
-    }else{
-      data.next = data.next
+      data.next = `-${data.next}`;
     }
   }
- 
+
   if (buttonName === '=') {
     data.total = Operate(Number(data.numOne), Number(data.next), data.operation).toString();
     data.operation = null;
