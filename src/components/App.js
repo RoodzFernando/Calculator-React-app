@@ -7,24 +7,24 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      total: '',
-      next: '',
-      operation: '',
-      numOne: ''
+      total: null,
+      next: null,
+      operation: null,
+      current: null,
     }
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(buttonName) {
-    this.setState(prevState => {
-      Calculate(prevState, buttonName);
-    })
+    const state = Calculate(this.state, buttonName);
+    this.setState(state);
   }
 
   render() {
+    const { current } = this.state;
     return (
       <div id="calculation-interface">
-        <Display />
+        <Display result={current} />
         <ButtonPanel clickHandler = {e => this.handleClick(e)}/>
       </div>
     );
