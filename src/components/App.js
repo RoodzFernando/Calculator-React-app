@@ -1,6 +1,7 @@
+/* eslint-disable react/no-unused-state */
 import React from 'react';
-import Display from '../components/Display';
-import ButtonPanel from '../components/ButtonPanel';
+import Display from './Display';
+import ButtonPanel from './ButtonPanel';
 import Calculate from '../logic/calculate';
 
 export default class App extends React.Component {
@@ -16,6 +17,10 @@ export default class App extends React.Component {
   }
 
   handleClick(buttonName) {
+    this.setState(prevState => {
+      Calculate(prevState, buttonName);
+    });
+
     const state = Calculate(this.state, buttonName);
     this.setState(state);
   }
@@ -29,6 +34,4 @@ export default class App extends React.Component {
       </div>
     );
   }
-
 }
-

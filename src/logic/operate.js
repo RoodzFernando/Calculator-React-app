@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable default-case */
 const Big = require('big.js');
 
 export default function operate(numberOne, numberTwo, operation) {
@@ -18,7 +20,7 @@ export default function operate(numberOne, numberTwo, operation) {
       num2 > 0 ? result = num1.div(num2) : result = 'Cannot divide by zero';
       break;
     case '+/-':
-      result = num1.times(-1)
+      result = num1.times(-1);
       break;
   }
   return result;
