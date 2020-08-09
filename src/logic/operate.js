@@ -17,7 +17,7 @@ export default function operate(numberOne, numberTwo, operation) {
       result = num1.times(num2);
       break;
     case '÷':
-      num2 > 0 ? result = num1.div(num2) : result = 'Error';
+      num2 > 0 ? result = num1.div(num2) : result = 'Cannot divide by zero';
       break;
     case '+/-':
       result = num1.times(-1);
