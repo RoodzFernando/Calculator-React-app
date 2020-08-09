@@ -12,7 +12,7 @@ export default class App extends React.Component {
       next: null,
       operation: null,
       current: null,
-    }
+    };
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -30,7 +30,7 @@ export default class App extends React.Component {
     return (
       <div id="calculation-interface">
         <Display result={current} />
-        <ButtonPanel clickHandler = {e => this.handleClick(e)}/>
+        <ButtonPanel clickHandler={e => this.handleClick(e)} />
       </div>
     );
   }
