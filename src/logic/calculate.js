@@ -1,32 +1,48 @@
-
+/* eslint-disable no-param-reassign */
 import Operate from './operate';
-/**
- The calculator data object should contain three properties: total, next and operation.
- This method should use the buttonName argument to mutate the calculator’ s data object and
- return its modified version.For instance
- if buttonName == "+/-", it should multiply total and next by - 1 to make it negative or positive.
- */
+
 export default function calculate(data, buttonName) {
   if (buttonName === 'AC') {
-    return {
-      total: null,
-      next: null,
-      operation: null,
-    };
+    data.operation = null;
+    data.numOne = null;
+    data.next = null;
   }
-  // check for button and operation sign
-      // console.log(/\d/.test(e.target.textContent) ? e.target.textContent : false)
-      const checkCharacter = (string) => {
-        const testChar = /\d/.test(string);
-        if (testChar) {
-          return (0|1|2|3|4|5|6|7|8|9);
-          // return (buttonName);
-        }else if (string.length == 1){
-          return ('+'|'-'|'x'|'÷');
-        }
-        // return string;
-      }
 
-      // operate takes numberOne numberTwo operation
+  if (/\+|-|x|÷/.test(buttonName)) {
+    if (buttonName.length === 1) {
+      data.operation = buttonName;
+      data.numOne = data.next;
+      data.next = null;
+    }
+  }
 
+  if (/\d/.test(buttonName)) {
+    if (data.next) {
+      data.next += buttonName;
+    } else {
+      data.next = buttonName;
+    }
+  }
+
+  if (buttonName === '.') {
+    if (data.next) {
+      data.next += buttonName;
+    } else {
+      data.next = `0${buttonName}`;
+    }
+  }
+
+  if (buttonName === '+/-') {
+    if (data.next > 0) {
+      data.next = `-${data.next}`;
+    }
+  }
+
+  if (buttonName === '=') {
+    data.total = Operate(Number(data.numOne), Number(data.next), data.operation).toString();
+    data.operation = null;
+    data.numOne = null;
+    data.next = null;
+  }
+  return data;
 }
