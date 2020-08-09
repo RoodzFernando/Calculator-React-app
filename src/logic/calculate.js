@@ -16,9 +16,9 @@ export default function calculate(data, buttonName) {
       if (data.current && data.next) {
         const lastChar = data.current.charAt(data.current.length - 1);
         if ((lastChar === '+' || lastChar === '-' || lastChar === 'x' || lastChar === '÷')
-         && (lastChar !== buttonName)
-         || (lastChar === '+' || lastChar === '-' || lastChar === 'x' || lastChar === '÷')
-         && (lastChar === buttonName)) {
+          && (lastChar !== buttonName)
+          || (lastChar === '+' || lastChar === '-' || lastChar === 'x' || lastChar === '÷')
+          && (lastChar === buttonName)) {
           const newAr = data.current.split('');
           newAr[newAr.length - 1] = buttonName;
           data.current = newAr.join('');
@@ -50,7 +50,6 @@ export default function calculate(data, buttonName) {
       data.current = `0${buttonName}`;
     }
   }
-
   if (buttonName === '+/-') {
     if (data.next > 0) {
       data.next = `${-1 * data.next}`;
