@@ -12,15 +12,11 @@ export default class App extends React.Component {
       next: null,
       operation: null,
       current: null,
-    }
+    };
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(buttonName) {
-    this.setState(prevState => {
-      Calculate(prevState, buttonName);
-    });
-
     const state = Calculate(this.state, buttonName);
     this.setState(state);
   }
@@ -30,7 +26,7 @@ export default class App extends React.Component {
     return (
       <div id="calculation-interface">
         <Display result={current} />
-        <ButtonPanel clickHandler = {e => this.handleClick(e)}/>
+        <ButtonPanel clickHandler={e => this.handleClick(e)} />
       </div>
     );
   }
